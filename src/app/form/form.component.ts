@@ -11,8 +11,8 @@ export class FormComponent implements OnInit {
   constructor() {}
 
   private file: File = null;
-  private breakLinesCount = 1;
-  private sentencesPerParagraph = 1;
+  breakLinesCount = 1;
+  sentencesPerParagraph = 1;
   isChecked: boolean;
   formattedText: string;
 

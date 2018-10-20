@@ -18,8 +18,7 @@
     <div class="col-sm-2 "></div>
     <label for="exampleFormControlFile1" class="col-sm-2 col-form-label">File</label>
     <div class="col-sm-5">
-      <input [(ngModel)]="test" (change)="fileInputChange($event)" type="file" class="form-control-file" id="fileToProcess"
-        required [ngModelOptions]="{standalone: true}">
+      <input (change)="fileInputChange($event)" type="file" class="form-control-file" id="fileToProcess">
       <span id=" selectHelpBlock" class="form-text text-muted">select
         file to be processed.</span>
     </div>
@@ -53,7 +52,7 @@
   </div>
   <div class="row ">
     <div class="col-sm-2"></div>
-    <button id="processButton" type="button" (click)="loadFileAsText(fileToUpload)" class="btn btn-primary process_button">Process
+    <button id="processButton" type="button" (click)="loadFileAsText($event)" class="btn btn-primary process_button">Process
       File</button>
   </div>
 
