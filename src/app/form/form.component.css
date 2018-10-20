@@ -1,0 +1,18 @@
+.process_button {
+  margin-left: 14px;
+}
+
+.block_casing {
+  margin-top: 14px;
+}
+
+.customFooter {
+  margin-top: 62px;
+  background-color: #042344;
+  font-size: 11px;
+}
+
+#processButton {
+  border-color: #bd9540;
+  background-color: #042344;
+}
