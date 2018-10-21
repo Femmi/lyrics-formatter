@@ -1,29 +1,27 @@
-.container {
-  margin: auto;
-  width: 50%;
-  border: 1px solid #e8e8e8;
-  padding: 12px 0px 11px 0px;
-  background-color: #c39a46;
-  border-radius: 3px;
+@font-face {
+  font-family: Pacifico;
+  src: url('../assets/Pacifico/Pacifico-Regular.ttf');
 }
 
 .imageContainer {
   background-color: #042344;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   border: 2px solid #c8a250;
   border-radius: 4px;
-}
-
-@font-face {
-  font-family: Pacifico;
-  src: url('../assets/Pacifico/Pacifico-Regular.ttf');
 }
 
 #app_name {
   font-family: 'Pacifico', cursive;
   color: #042344;
   font-size: 34px;
-  text-align: center;
   text-shadow: 4px 4px 4px #ecf0f5;
-  padding-bottom: 12px;
+}
+
+.customContainer {
+  background-color: #c39a46;
+  border-radius: 4px;
+}
+
+.blockquote-footer {
+  font-size: 60%;
 }
