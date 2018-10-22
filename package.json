@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot --prod",
-    "devstart": "ng serve"
+    "localserve": "ng serve"
   },
   "private": true,
   "dependencies": {
