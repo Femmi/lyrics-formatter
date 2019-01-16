@@ -1,41 +1,68 @@
 <form>
   <div class="form-group row">
     <div class="col-sm-2 "></div>
-    <label for="lineSpacingCount" class="col-sm-2 col-form-label">Line spacing</label>
+    <label for="lineSpacingCount" class="col-sm-2 col-form-label"
+      >Line spacing</label
+    >
     <div class="col-sm-5">
-      <select [(ngModel)]="breakLinesCount" class="form-control" id="lineSpacingCount" [ngModelOptions]="{standalone: true}">
+      <select
+        [(ngModel)]="breakLinesCount"
+        class="form-control"
+        id="lineSpacingCount"
+        [ngModelOptions]="{ standalone: true }"
+      >
         <option>1</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
         <option>5</option>
       </select>
-      <span id="selectHelpBlock" class="form-text text-muted">Indicates spacing (line breaks) between paragraphs.</span>
+      <span id="selectHelpBlock" class="form-text text-muted"
+        >Indicates spacing (line breaks) between paragraphs.</span
+      >
     </div>
   </div>
 
   <div class="form-group row">
     <div class="col-sm-2 "></div>
-    <label for="exampleFormControlFile1" class="col-sm-2 col-form-label">File</label>
+    <label for="exampleFormControlFile1" class="col-sm-2 col-form-label"
+      >File</label
+    >
     <div class="col-sm-5">
-      <input (change)="fileInputChange($event)" type="file" class="form-control-file" id="fileToProcess">
-      <span id=" selectHelpBlock" class="form-text text-muted">select
-        file to be processed.</span>
+      <input
+        (change)="fileInputChange($event)"
+        type="file"
+        accept="text/plain"
+        class="form-control-file"
+        id="fileToProcess"
+      />
+      <span id=" selectHelpBlock" class="form-text text-muted"
+        >select file to be processed.</span
+      >
     </div>
   </div>
 
   <div class="form-group row">
     <div class="col-sm-2 "></div>
-    <label for="paragraphCounts" class="col-sm-2 col-form-label">Number of sentences per paragraph</label>
+    <label for="paragraphCounts" class="col-sm-2 col-form-label"
+      >Number of sentences per paragraph</label
+    >
     <div class="col-sm-5">
-      <select [(ngModel)]="sentencesPerParagraph" class="form-control" id="paragraphCounts" [ngModelOptions]="{standalone: true}">
+      <select
+        [(ngModel)]="sentencesPerParagraph"
+        class="form-control"
+        id="paragraphCounts"
+        [ngModelOptions]="{ standalone: true }"
+      >
         <option>1</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
         <option>5</option>
       </select>
-      <span id="selectHelpBlock" class="form-text text-muted">Indicates the number of sentences in a paragraph.</span>
+      <span id="selectHelpBlock" class="form-text text-muted"
+        >Indicates the number of sentences in a paragraph.</span
+      >
     </div>
   </div>
 
@@ -44,16 +71,29 @@
     <div class="col-sm-2">Convert to block letters</div>
     <div class="col-sm-5">
       <div class="form-check">
-        <input [(ngModel)]="isChecked" class="form-check-input" type="checkbox" id="gridCheck1" [ngModelOptions]="{standalone: true}"
-          (change)="checkValue(isChecked? true : false)">
+        <input
+          [(ngModel)]="covertToUpperCase"
+          class="form-check-input"
+          type="checkbox"
+          id="gridCheck1"
+          [ngModelOptions]="{ standalone: true }"
+          (change)="checkValue(covertToUpperCase ? true : false)"
+        />
       </div>
-      <span id="radio1HelpBlock" class="form-text text-muted block_casing">converts all letters to UPPERCASE.</span>
+      <span id="radio1HelpBlock" class="form-text text-muted block_casing"
+        >converts all letters to UPPERCASE.</span
+      >
     </div>
   </div>
   <div class="form-group row ">
     <div class="col-sm-2"></div>
-    <button id="processButton" type="button" (click)="loadFileAsText($event)" class="btn btn-primary process_button">Process
-      File</button>
+    <button
+      id="processButton"
+      type="button"
+      (click)="loadFileAsText($event)"
+      class="btn btn-primary process_button"
+    >
+      Process File
+    </button>
   </div>
-
 </form>

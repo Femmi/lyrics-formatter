@@ -13,7 +13,7 @@ export class FormComponent implements OnInit {
   private file: File = null;
   breakLinesCount = 1;
   sentencesPerParagraph = 1;
-  isChecked: boolean;
+  covertToUpperCase: boolean;
   formattedText: string;
 
   ngOnInit() {}
@@ -31,10 +31,20 @@ export class FormComponent implements OnInit {
     const fileReader = new FileReader();
 
     fileReader.onload = fileLoaded => {
-      console.log(fileLoaded);
-      const fileContent = this.isChecked
+      let fileContent = this.covertToUpperCase
         ? _.toUpper((<FileReader>fileLoaded.target).result)
         : (<FileReader>fileLoaded.target).result;
+
+      // https://stackoverflow.com/questions/9401312/how-to-replace-curly-quotation-marks-in-a-string-using-javascript
+      // right single quote gets corrupted while parsing and later returned as unknown unicode after reading text file.
+      // replaced suspected characters before processing file content to resolve the issue.
+      // tslint:disable-next-line:quotemark
+      fileContent = fileContent
+        // tslint:disable-next-line:quotemark
+        .replace(/[\u2018\u2019]/g, "'")
+        .replace(/[\u201C\u201D]/g, '"')
+        .replace(/[\u2013\u2014]/g, '-')
+        .replace(/[\u2026]/g, '...');
 
       const arrayOfParagraphs = _.split(fileContent, '\n');
 
