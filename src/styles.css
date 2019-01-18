@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+/*imported this library manually to fix issue with Material Dialog showing at the bottom of the screen
+https://github.com/angular/material2/issues/9532
+*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 .companyLogo {
   width: 30%;
 }
@@ -12,4 +18,101 @@ body {
   background-color: #042344;
   padding-top: 7px;
   font-weight: 500;
+}
+
+.custom-modal-box .mat-form-field {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #c79e48;
+  border-radius: 3px;
+}
+
+.custom-modal-box .mat-dialog-container {
+  background-color: #042344;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.custom-modal-box .mat-dialog-content {
+  height: 500px;
+  overflow: hidden;
+  color: rgb(172, 168, 168);
+  font-size: 19px;
+}
+
+.placeholder {
+  color: rgb(172, 168, 168);
+  font-size: 19px;
+}
+
+.custom-modal-box .mat-input-element {
+  resize: none;
+}
+
+.custom-modal-box .mat-dialog-title {
+  text-align: center;
+  color: #c79e48;
+  text-shadow: 1px 1px 1px #ecf0f5;
+  margin-bottom: 8px;
+  padding-top: 0px;
+  font-family: 'Pacifico', cursive;
+  padding-left: 46px;
+}
+
+.custom-modal-box .mat-form-field-infix {
+  padding: 0px;
+  border-top: 0px;
+  padding: 3px;
+}
+
+.custom-modal-box .mat-dialog-actions {
+  margin: 0 auto;
+  display: table;
+  color: white;
+}
+
+.custom-modal-box .mat-button {
+  border: 1px solid white;
+  font-family: inherit;
+  background-color: #b18831;
+  color: #042344;
+}
+
+.custom-modal-box .mat-button:hover {
+  background-color: #ffca3a;
+  color: #042344;
+}
+
+.custom-modal-box .mat-button:active {
+  background-color: #c79e48;
+  color: #042344;
+}
+
+.custom-modal-box .custom-close-button {
+  float: right;
+  color: rgb(155, 4, 4);
+  cursor: pointer;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.custom-modal-box .mat-icon:hover {
+  float: right;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.snack-bar {
+  background-color: #c79e48;
+  color: #042344;
+  text-align: center;
+}
+
+.snack-bar .mat-simple-snackbar {
+  font-family: inherit;
+  text-align: center;
 }
