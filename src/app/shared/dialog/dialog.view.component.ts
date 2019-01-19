@@ -28,6 +28,7 @@ export class DialogViewComponent {
   processFile(message: string) {
     if (this.textContent == null || this.textContent.trim().length === 0) {
       this.snackBar.openSnackBar('Please insert text in the window above...');
+      this.textContent = '';
       return;
     }
     const formattedText = this.textFormatService.formatText(
