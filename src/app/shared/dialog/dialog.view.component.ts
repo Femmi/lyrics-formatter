@@ -49,8 +49,4 @@ export class DialogViewComponent {
 
     this.snackBar.openSnackBar('Text copied to clipboard.');
   }
-
-  closeDialog() {
-    console.log('text');
-  }
 }
