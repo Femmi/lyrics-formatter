@@ -52,7 +52,7 @@ body {
 .custom-modal-box .mat-dialog-title {
   text-align: center;
   color: #c79e48;
-  text-shadow: 1px 1px 1px #ecf0f5;
+  /*text-shadow: 1px 1px 1px #ecf0f5;*/
   margin-bottom: 8px;
   padding-top: 0px;
   font-family: 'Pacifico', cursive;
