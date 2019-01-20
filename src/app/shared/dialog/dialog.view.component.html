@@ -21,14 +21,14 @@
     Clear
   </button>
   <button mat-button (click)="processFile('Format completed.')">
-    Format Lyrics
+    Format Text
   </button>
   <button
     mat-button
     *ngIf="isFileProcessed"
     (click)="copyToClipBoard(textArea)"
   >
-    Copy Lyrics
+    Copy Text
   </button>
 </div>
 <!--[mat-dialog-close]="textContent" ng generate component --spec=false component-name cdkFocusInitial-->
